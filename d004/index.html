@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 004</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        header, section {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 5px;
+            margin: 10px 0 10px 0;
+        }
+
+        .button-section input {
+            width: auto;
+            height: 80px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cálculo de Troco</h1>
+    </header>
+
+    <section class="button-section">
+        <input type="button" value="Comprar produto" onclick="calculateChange()">
+    </section>
+
+    <footer>
+        <p>&copy; Desafio by Felipe</p>
+    </footer>
+
+    <script>
+        function calculateChange() {
+            let productName = prompt("Produto que deseja comprar: ");
+            let productPrice = Number(prompt(`Preço do ${productName}?`)).toFixed(2);
+            let userMoney = Number(prompt(`Valor entregue para comprar do ${productName}: `)).toFixed(2);
+            let changeMoney = (userMoney - productPrice).toFixed(2);
+
+            alert(`
+            Você acaba de adquirir um ${productName} por R$${productPrice} reais!
+            Seu troco será de R$${changeMoney} reais!            
+            `)
+        }
+    </script>
+</body>
+</html>
