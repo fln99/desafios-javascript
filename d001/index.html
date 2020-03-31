@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 001</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        header, section {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 5px;
+            margin: 10px 0 10px 0;
+        }
+
+        .buttons-section input {
+            width: 100px;
+            height: 80px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desafio das Mensagens</h1>
+    </header>
+
+    <section class="buttons-section">
+        <input type="button" value="Botão 1" onclick="bttnAlert(0)">
+        <input type="button" value="Botão 2" onclick="bttnAlert(1)">
+        <input type="button" value="Botão 3" onclick="bttnAlert(2)">
+    </section>
+
+    <footer>
+        <p>&copy; Desafio by Felipe</p>
+    </footer>
+    
+    <script>
+        function bttnAlert(id) {
+            if(id == 0) {
+                alert("Você pressionou o 1º botão!");
+
+            } else if (id == 1) {
+                alert("Você pressionou o 2º botão!");
+
+            } else {
+                alert("Você pressionou o 3º botão!")
+
+            }
+        }
+    </script>
+</body>
+</html>
