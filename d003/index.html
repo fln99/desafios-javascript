@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 003</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        header, section {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 5px;
+            margin: 10px 0 10px 0;
+        }
+
+        .button-section input {
+            width: auto;
+            height: 80px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Before and After</h1>
+    </header>
+
+    <section class="button-section">
+        <input type="button" value="Antecessor e Sucessor" onclick="genBeAf()">
+    </section>
+
+    <footer>
+        <p>&copy; Desafio by Felipe</p>
+    </footer>
+
+    <script>
+        function genBeAf() {
+            let insertedNumber = Number(prompt("Insira um número inteiro abaixo: "));
+
+            alert(`
+            O antecessor de ${insertedNumber} é ${insertedNumber - 1},
+            E o sucessor de ${insertedNumber} é ${insertedNumber + 1}
+            `)
+        }
+    </script>
+</body>
+</html>
