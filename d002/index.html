@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 002</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        header, section {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 5px;
+            margin: 10px 0 10px 0;
+        }
+
+        .button-section input {
+            width: auto;
+            height: 80px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Boas-vindas</h1>
+    </header>
+
+    <section class="button-section">
+        <input type="button" value="Inicie o desafio" onclick="questionBox()">
+    </section>
+
+    <footer>
+        <p>&copy; Desafio by Felipe</p>
+    </footer>
+
+    <script>
+        function questionBox() {
+            let userName = prompt("Qual o seu nome?");
+
+            let userAge = prompt(`Olá ${userName}! Quantos anos você tem?`);
+
+            alert(`Que legal! Acabei de conhecer ${userName}, que tem ${userAge} anos de idade e ${userAge * 365} dias vividos! XD`);
+        }
+    </script>
+</body>
+</html>
