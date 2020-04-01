@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 005</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        header, section {
+            font-size: 15pt;
+            text-align: center;
+        }
+        p {
+            font-size: 12pt;
+        }
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 5px;
+            margin: 10px 0 10px 0;
+        }
+
+        .button-section input {
+            width: auto;
+            height: 80px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Medidas</h1>
+    </header>
+
+    <section class="button-section">
+        <input type="button" value="Converter" onclick="convertMeasure()">
+        <p id="paragraph">Clique no botão acima para iniciar</p>
+    </section>
+
+    <footer>
+        <p>&copy; Desafio by Felipe</p>
+    </footer>
+
+    <script>
+        let parentElm = document.querySelector('.button-section');
+        let divResultMeasures = document.createElement('div')
+        
+        function convertMeasure() {
+            // iM == insertedMeasure;
+            divResultMeasures.innerHTML = '';
+            let iM = Number(prompt("Insira uma distância em metros: "));
+
+            let pElm = document.querySelector('#paragraph');
+            pElm.style = 'font-size: 15pt; font-weight: bold;';
+            pElm.innerHTML = `A distância de ${iM} metros, corresponde a ...`
+
+            let Km = iM / 1000;
+            let Hm = iM / 100;
+            let Dam = iM / 10;
+            let Dm = iM * 10;
+            let Cm = iM * 100;
+            let mm = iM * 1000;
+
+            divResultMeasures.innerHTML = `${Km} quilômetros (Km);</br>${Hm} hectômetros (Hm);</br>${Dam} decâmetros (Dam);</br>${Dm} decímetros (dm);</br>${Cm} centímetros (cm);</br>${mm} milímetros (mm);`;
+
+            parentElm.appendChild(divResultMeasures);
+        }
+    </script>
+</body>
+</html>
