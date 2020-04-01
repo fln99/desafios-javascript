@@ -1,0 +1,23 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+header, section {
+    font-size: 15pt;
+    text-align: center;
+}
+p {
+    font-size: 12pt;
+}
+footer {
+    text-align: center;
+    font-style: italic;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+}
+
+.button-section input {
+    width: auto;
+    height: 80px;
+    font-size: 12pt;
+}
